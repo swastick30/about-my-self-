@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Surya's Domain</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2E8B57; /* Sea green background */
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: white;
+            border: 2px solid white;
+            text-align: center;
+            padding: 10px;
+        }
+        .main-content {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calendar {
+            /* Your calendar styling here */
+        }
+        .submit-btn {
+            background-color: #2E8B57; /* Sea green + blue */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .menu {
+            display: none; /* Initially hidden */
+            margin-top: 20px;
+        }
+        .menu-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #2E8B57; /* Sea green */
+            border: 2px solid #87CEEB; /* Sky blue */
+            color: black;
+            font-weight: bold;
+            font-style: italic;
+            border-radius: 5px;
+        }
+        .tab-box {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border: 2px solid #FFD700; /* Egg yolks color */
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Surya's Domain</h1>
+    </div>
+    <div class="main-content">
+        <form id="userForm" method="post" action="send_mail.php">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Number:</label>
+                <input type="number" id="number" name="number" required>
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <div class="main-content menu" id="menu">
+        <div class="menu-item">My name - Swastick Das but you can call me the prince of your dreams</div>
+        <div class="menu-item">My nickname - Prince, Surya, Baby</div>
+        <div class="menu-item">My age - 18 (age is just a number baby girl if you really desire I can be yours)</div>
+        <div class="menu-item">My Hobbies - Cooking, Riding Bikes (it could be u too), Driving Cars, Gardening, Playing Guitar</div>
+        <div class="menu-item">Achievement - Ex_Baranagar youth sporting Cricket Club Captain</div>
+        <div class="menu-item">Behavior - Possessive, jealous, Anger issues, Short-tempered, caring, loving, I can change the way you walk</div>
+    </div>
+    <div class="main-content tab-box">
+        <h2>Tell Me About Yourself</h2>
+        <form id="aboutMeForm" method="post" action="send_mail.php">
+            <textarea id="aboutMe" rows="5" cols="50" placeholder="Tell me something about yourself the glory of heaven ( yea it's u 🙈)" required></textarea><br>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('userForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('menu').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
